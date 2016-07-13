@@ -1,0 +1,6 @@
+framework module Pods_PronoIOTests {
+  umbrella header "Pods-PronoIOTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
