@@ -83,4 +83,8 @@
             <point key="canvasLocation" x="1153.5" y="611.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="leaderboard" width="40" height="40"/>
+        <image name="matches" width="32" height="32"/>
+    </resources>
 </document>
