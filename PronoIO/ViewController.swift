@@ -23,6 +23,7 @@ class ViewController: UIViewController {
                 print(error.description)
         })
         print("Finish")
+        print("Test")
     }
     
     override func viewDidLoad() {
