@@ -45,7 +45,7 @@
         <!--Matchs-->
         <scene sceneID="mLi-ht-T2C">
             <objects>
-                <viewController id="n3p-pP-SJr" sceneMemberID="viewController">
+                <viewController id="n3p-pP-SJr" customClass="MatchController" customModule="PronoIO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ckn-to-LRB"/>
                         <viewControllerLayoutGuide type="bottom" id="mgd-Ai-XBk"/>
