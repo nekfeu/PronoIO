@@ -1,6 +1,0 @@
-framework module Pods_PronoIO {
-  umbrella header "Pods-PronoIO-umbrella.h"
-
-  export *
-  module * { export * }
-}
