@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A31DC711D391F1E008CD69A /* MatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31DC701D391F1E008CD69A /* MatchController.swift */; };
+		0A31DC731D392535008CD69A /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31DC721D392535008CD69A /* Match.swift */; };
 		0AC887701D36C75500430F05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8876F1D36C75500430F05 /* AppDelegate.swift */; };
 		0AC887721D36C75500430F05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC887711D36C75500430F05 /* ViewController.swift */; };
 		0AC887751D36C75500430F05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC887731D36C75500430F05 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		0A31DC701D391F1E008CD69A /* MatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchController.swift; sourceTree = "<group>"; };
+		0A31DC721D392535008CD69A /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		0AC8876C1D36C75500430F05 /* PronoIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PronoIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC8876F1D36C75500430F05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC887711D36C75500430F05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				0AC887711D36C75500430F05 /* ViewController.swift */,
 				0A31DC701D391F1E008CD69A /* MatchController.swift */,
 				0AC887731D36C75500430F05 /* Main.storyboard */,
+				0A31DC721D392535008CD69A /* Match.swift */,
 				0AC887761D36C75500430F05 /* Assets.xcassets */,
 				0AC887781D36C75500430F05 /* LaunchScreen.storyboard */,
 				0AC8877B1D36C75500430F05 /* Info.plist */,
@@ -434,6 +437,7 @@
 				0AC887721D36C75500430F05 /* ViewController.swift in Sources */,
 				0A31DC711D391F1E008CD69A /* MatchController.swift in Sources */,
 				0AC887701D36C75500430F05 /* AppDelegate.swift in Sources */,
+				0A31DC731D392535008CD69A /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

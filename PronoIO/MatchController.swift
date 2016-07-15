@@ -11,14 +11,18 @@ import Firebase
 
 class MatchController: UIViewController {
     
-    func setupFirebase() {
-        // Get a reference to our posts
+    var matches = Array<Match>()
+    
+    func loadMatches() {
         let ref = Firebase(url:"https://bustergoal-dc7ce.firebaseio.com/matches")
         
-        // Retrieve new posts as they are added to your database
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
-            print(snapshot.value.objectForKey("Team1") as! String)
-            print(snapshot.value.objectForKey("Team2") as! String)
+            
+            //var newMatch = Match("", "", "")
+            print(snapshot.key as! String)
+            print(snapshot.value.objectForKey("dom") as! String)
+            print(snapshot.value.objectForKey("ext") as! String)
+            
             }, withCancelBlock: { error in
                 print(error.description)
         })
@@ -28,7 +32,7 @@ class MatchController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupFirebase()
+        loadMatches()
     }
     
 }
