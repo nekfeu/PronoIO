@@ -13,19 +13,19 @@ class Match {
     private(set) var key: String!
     private(set) var dom: String!
     private(set) var ext: String!
-    private(set) var date: String!
+    private(set) var time: String!
     
     init(key: String, dictionary: Dictionary<String, AnyObject>) {
         self.key = key
         
-        if let tmpDom = dictionary["dom"] as? String {
+        if let tmpDom = dictionary["localTeam"] as? String {
             self.dom = tmpDom
         }
-        if let tmpExt = dictionary["ext"] as? String {
+        if let tmpExt = dictionary["extTeam"] as? String {
             self.ext = tmpExt
         }
-        if let tmpDate = dictionary["date"] as? String {
-            self.date = tmpDate
+        if let tmpTime = dictionary["time"] as? String {
+            self.time = tmpTime
         }
     }
 }

@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
-
  
     @IBOutlet var EmailAddressTextField: UITextField!
     @IBOutlet var PasswordTextField: UITextField!
