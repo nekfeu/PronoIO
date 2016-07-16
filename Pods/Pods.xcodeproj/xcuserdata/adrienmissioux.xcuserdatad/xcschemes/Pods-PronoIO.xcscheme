@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4E2A2AEE50D3865AB9CCDC96'
+               BlueprintIdentifier = 'CB62B1D3072D4C72620D882B'
                BlueprintName = 'Pods-PronoIO'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-PronoIO.a'>
