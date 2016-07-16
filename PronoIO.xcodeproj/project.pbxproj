@@ -16,8 +16,11 @@
 		0AC8877A1D36C75500430F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC887781D36C75500430F05 /* LaunchScreen.storyboard */; };
 		0AC887851D36C75500430F05 /* PronoIOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC887841D36C75500430F05 /* PronoIOTests.swift */; };
 		0AC887901D36C75500430F05 /* PronoIOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8878F1D36C75500430F05 /* PronoIOUITests.swift */; };
+		21FFB7DE1D39130B005CA591 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFB7DD1D39130B005CA591 /* LoginViewController.swift */; };
+		21FFB7E01D39161D005CA591 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFB7DF1D39161D005CA591 /* SignUpViewController.swift */; };
+		21FFB7E41D392ECE005CA591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21FFB7E31D392ECE005CA591 /* GoogleService-Info.plist */; };
+		6F6A08F229FEEABC6C7BF629 /* libPods-PronoIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AB38AD571E2C5B0B85F33D /* libPods-PronoIO.a */; };
 		78788FE6DD2A7D8B7B0415B9 /* Pods_PronoIOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F6C3572DA5244BE492683D /* Pods_PronoIOTests.framework */; };
-		8BA8434BBA4FD26F5C369E2C /* Pods_PronoIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85790A91AA1B8C6B2D3342F0 /* Pods_PronoIO.framework */; };
 		CB346EECE3034A7B4F4786F0 /* Pods_PronoIOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5826D47044014A3A1FA40ED /* Pods_PronoIOUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,11 +58,14 @@
 		0AC8878F1D36C75500430F05 /* PronoIOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronoIOUITests.swift; sourceTree = "<group>"; };
 		0AC887911D36C75500430F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F6C3572DA5244BE492683D /* Pods_PronoIOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PronoIOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FFB7DD1D39130B005CA591 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		21FFB7DF1D39161D005CA591 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		21FFB7E31D392ECE005CA591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37FA08A237FDFCC2C24FB81D /* Pods-PronoIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronoIO.release.xcconfig"; path = "Pods/Target Support Files/Pods-PronoIO/Pods-PronoIO.release.xcconfig"; sourceTree = "<group>"; };
+		42AB38AD571E2C5B0B85F33D /* libPods-PronoIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PronoIO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B228BAB85D91082AA3C7628 /* Pods-PronoIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronoIO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PronoIO/Pods-PronoIO.debug.xcconfig"; sourceTree = "<group>"; };
 		729359C79D8C082D84B45168 /* Pods-PronoIOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronoIOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PronoIOTests/Pods-PronoIOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8277B197C2510E2AD99B877F /* Pods-PronoIOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronoIOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PronoIOTests/Pods-PronoIOTests.release.xcconfig"; sourceTree = "<group>"; };
-		85790A91AA1B8C6B2D3342F0 /* Pods_PronoIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PronoIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BF6F94546F64CD71CA52975 /* Pods-PronoIOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronoIOUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PronoIOUITests/Pods-PronoIOUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5826D47044014A3A1FA40ED /* Pods_PronoIOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PronoIOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92D9CA6D39DCF7E60F56DE6 /* Pods-PronoIOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PronoIOUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PronoIOUITests/Pods-PronoIOUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA8434BBA4FD26F5C369E2C /* Pods_PronoIO.framework in Frameworks */,
+				6F6A08F229FEEABC6C7BF629 /* libPods-PronoIO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +124,10 @@
 		0AC8876E1D36C75500430F05 /* PronoIO */ = {
 			isa = PBXGroup;
 			children = (
+				21FFB7E31D392ECE005CA591 /* GoogleService-Info.plist */,
 				0AC8876F1D36C75500430F05 /* AppDelegate.swift */,
+				21FFB7DD1D39130B005CA591 /* LoginViewController.swift */,
+				21FFB7DF1D39161D005CA591 /* SignUpViewController.swift */,
 				0AC887711D36C75500430F05 /* ViewController.swift */,
 				0A31DC701D391F1E008CD69A /* MatchController.swift */,
 				0AC887731D36C75500430F05 /* Main.storyboard */,
@@ -151,9 +160,9 @@
 		845B99FBCC432D68E08620BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				85790A91AA1B8C6B2D3342F0 /* Pods_PronoIO.framework */,
 				11F6C3572DA5244BE492683D /* Pods_PronoIOTests.framework */,
 				C5826D47044014A3A1FA40ED /* Pods_PronoIOUITests.framework */,
+				42AB38AD571E2C5B0B85F33D /* libPods-PronoIO.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,12 +187,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC887941D36C75500430F05 /* Build configuration list for PBXNativeTarget "PronoIO" */;
 			buildPhases = (
+				06834ED0C1353FC55D0CB3A7 /* Check Pods Manifest.lock */,
 				FCE747AA6F9E06B887A7C2A4 /* 📦 Check Pods Manifest.lock */,
 				0AC887681D36C75500430F05 /* Sources */,
 				0AC887691D36C75500430F05 /* Frameworks */,
 				0AC8876A1D36C75500430F05 /* Resources */,
 				FBAF2BDD02AA0906271787B1 /* 📦 Embed Pods Frameworks */,
 				CE925F1A194F7519E75F5153 /* 📦 Copy Pods Resources */,
+				5B113C057A086322BD7B696F /* Embed Pods Frameworks */,
+				6D2BF068D58D3B74E75ADDA4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21FFB7E41D392ECE005CA591 /* GoogleService-Info.plist in Resources */,
 				0AC8877A1D36C75500430F05 /* LaunchScreen.storyboard in Resources */,
 				0AC887771D36C75500430F05 /* Assets.xcassets in Resources */,
 				0AC887751D36C75500430F05 /* Main.storyboard in Resources */,
@@ -307,6 +320,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		06834ED0C1353FC55D0CB3A7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		18E8ADC4EF299FED75D28DE9 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +378,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PronoIOTests/Pods-PronoIOTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B113C057A086322BD7B696F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PronoIO/Pods-PronoIO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D2BF068D58D3B74E75ADDA4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PronoIO/Pods-PronoIO-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		727771DD4751FBEB110ABFDE /* 📦 Copy Pods Resources */ = {
@@ -434,8 +492,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21FFB7DE1D39130B005CA591 /* LoginViewController.swift in Sources */,
 				0AC887721D36C75500430F05 /* ViewController.swift in Sources */,
-				0A31DC711D391F1E008CD69A /* MatchController.swift in Sources */,
+				21FFB7E01D39161D005CA591 /* SignUpViewController.swift in Sources */,
 				0AC887701D36C75500430F05 /* AppDelegate.swift in Sources */,
 				0A31DC731D392535008CD69A /* Match.swift in Sources */,
 			);
