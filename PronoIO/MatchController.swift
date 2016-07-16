@@ -9,30 +9,46 @@
 import UIKit
 import Firebase
 
-class MatchController: UIViewController {
+class MatchController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var matches = Array<Match>()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadMatches()
+    }
     
     func loadMatches() {
         let ref = Firebase(url:"https://bustergoal-dc7ce.firebaseio.com/matches")
         
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            let newMatch = Match(key: snapshot.key as String, dictionary: Dictionary<String, AnyObject>())
             
-            //var newMatch = Match("", "", "")
-            print(snapshot.key as! String)
+            print(snapshot.key as String)
             print(snapshot.value.objectForKey("dom") as! String)
             print(snapshot.value.objectForKey("ext") as! String)
             
+            self.matches.append(newMatch)
+            self.tableView.reloadData()
             }, withCancelBlock: { error in
                 print(error.description)
         })
         print("Finish")
         print("Test")
     }
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadMatches()
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matches.count
     }
     
 }
