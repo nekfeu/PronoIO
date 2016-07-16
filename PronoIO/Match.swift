@@ -9,7 +9,7 @@
 import Firebase
 
 class Match {
-    private var ref: Firebase!
+    private var ref: FIRDatabase!
     private(set) var key: String!
     private(set) var dom: String!
     private(set) var ext: String!
