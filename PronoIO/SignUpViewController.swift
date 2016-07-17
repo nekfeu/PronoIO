@@ -11,9 +11,12 @@ import Firebase
 
 class SignUpViewController: UIViewController {
  
-    @IBOutlet var EmailAddressTextField: UITextField!
-    @IBOutlet var PasswordTextField: UITextField!
-    @IBOutlet var ConfirmPassword: UITextField!
+    @IBOutlet var emailAddressTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var confirmPassword: UITextField!
+    @IBOutlet var pseudo: UITextField!
+    
+    var ref = FIRDatabase.database().reference().child("/users")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,29 +31,25 @@ class SignUpViewController: UIViewController {
     
     @IBAction func CreateAccountAction(sender: AnyObject) {
 
-        if ((EmailAddressTextField.text != "" && PasswordTextField != "" && ConfirmPassword != "") && ConfirmPassword.text == PasswordTextField.text) {
+        if ((emailAddressTextField.text != "" && passwordTextField != "" && confirmPassword != "") && confirmPassword.text == passwordTextField.text) {
 
-            FIRAuth.auth()?.createUserWithEmail(EmailAddressTextField.text!, password: PasswordTextField.text!, completion: {
+            FIRAuth.auth()?.createUserWithEmail(emailAddressTextField.text!, password: passwordTextField.text!, completion: {
                 user, error in
-                
                 if error != nil {
                     
                     print(error)
-                    
                 }
                 else {
                 
                     print("User created")
-                    
+                    let newUser = ["club": "0", "email": self.emailAddressTextField.text!, "mobile": "0000000000", "points": "0", "pseudo": self.pseudo.text!, "rank": "0"]
+                    let firebaseNewUser = self.ref.childByAutoId()
+                    firebaseNewUser.setValue(newUser)
                     self.performSegueWithIdentifier("GoToCo", sender: self)
-                    
                 }
-                
-            })
-            
+
+                })
             }
-            
-            
         }
         
 }
