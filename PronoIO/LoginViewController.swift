@@ -24,6 +24,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
             // User is already logged in, do work such as go to next view controller.
+            dispatch_async(dispatch_get_main_queue()){
+                self.performSegueWithIdentifier("GoToMainMenu", sender: self)
+            }
         }
         else
         {
@@ -72,42 +75,52 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             // Handle cancellations
         }
         else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
             if result.grantedPermissions.contains("email")
             {
                 // Do work
                 let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
                 FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+                if let user = FIRAuth.auth()?.currentUser {
+                            let name = user.displayName! as String
+                            let email = user.email! as String
+                            let uid = user.uid
+                    
+                    print(email, name, uid)
+                    
+                    let checkWaitingRef = FIRDatabase.database().reference().child("/users")
+                    checkWaitingRef.queryOrderedByChild("email").queryEqualToValue("\(email)")
+                        .observeEventType(.Value, withBlock: { snapshot in
+                            
+                            if ( snapshot.value is NSNull ) {
+                                print("not found)")
+                                
+                                var ref = FIRDatabase.database().reference().child("/users")
+                                
+                                let newUser = ["club": "0", "email": email, "mobile": "0000000000", "points": 0, "pseudo": name, "rank": 0]
+                                let firebaseNewUser = ref.childByAutoId()
+                                firebaseNewUser.setValue(newUser)
+                                
+                            } else {
+                                let val = snapshot.value
+                                print(snapshot.value)
+                            }
+                    })
+                }
+                else {
+                        print("No user is signed in.")
+                    }
                     self.performSegueWithIdentifier("GoToMainMenu", sender: self)
                 }
+
             }
         }
+
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
+        
+        try! FIRAuth.auth()!.signOut()
+        loginButtonDidLogOut(fbButton)
     }
-    
-    func returnUserData()
-    {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
-            if ((error) != nil)
-            {
-                // Process error
-                print("Error: \(error)")
-            }
-            else
-            {
-                print("fetched user: \(result)")
-                let userName : NSString = result.valueForKey("name") as! NSString
-                print("User Name is: \(userName)")
-                let userEmail : NSString = result.valueForKey("email") as! NSString
-                print("User Email is: \(userEmail)")
-            }
-        })
-    }
-    
 }
