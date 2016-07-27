@@ -11,16 +11,13 @@ import Firebase
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
-    @IBOutlet var EmailAddress: UITextField!
-    @IBOutlet var Password: UITextField!
+    @IBOutlet var emailAddress: UITextField!
+    @IBOutlet var password: UITextField!
     @IBOutlet var fbButton: FBSDKLoginButton!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationController?.navigationBar.hidden=true
-        
-        
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
             // User is already logged in, do work such as go to next view controller.
@@ -33,7 +30,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             fbButton.readPermissions = ["public_profile", "email", "user_friends"]
             fbButton.delegate = self
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +39,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBAction func Login(sender: AnyObject) {
         
-        self.login(EmailAddress.text!, password: Password.text!)
+        self.login(emailAddress.text!, password: password.text!)
         
     }
 
