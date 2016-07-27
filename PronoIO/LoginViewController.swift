@@ -80,8 +80,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                             let name = user.displayName! as String
                             let email = user.email! as String
                             let uid = user.uid
+                            let photo = user.photoURL
                     
-                    print(email, name, uid)
+                    print(email, name, uid, photo)
                     
                     let checkWaitingRef = FIRDatabase.database().reference().child("/users")
                     checkWaitingRef.queryOrderedByChild("email").queryEqualToValue("\(email)")
