@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PronosticViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -32,27 +33,21 @@ class PronosticViewController: UIViewController, UIPickerViewDataSource, UIPicke
         picker.delegate = self
         picker.dataSource = self
         jokersSelected.inputView = picker
-        
         picker.showsSelectionIndicator = true
         picker.delegate = self
         picker.dataSource = self
-        
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.Default
         toolBar.translucent = true
         toolBar.tintColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
         toolBar.sizeToFit()
-        
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
-        
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
-        
         jokersSelected.inputView = picker
         jokersSelected.inputAccessoryView = toolBar
-        
         self.equipe1.text = self.equipe1_name
         self.equipe2.text = self.equipe2_name
         self.time.text = self.matchTime
@@ -120,6 +115,32 @@ class PronosticViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     @IBAction func validate(sender: AnyObject) {
+        
+        var userEmail = String()
+        
+        if let user = FIRAuth.auth()?.currentUser {
+            userEmail = user.email!
+            
+        }
+        var ref = FIRDatabase.database().reference()
+        
+        ref.child("users").queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {
+            snapshot in
+            
+            let email = snapshot.value!["email"] as! String
+            
+            if (email == userEmail) {
+                
+                var numScore1 = Int(self.score1.text!)
+                
+                let post = ["equipe1": self.equipe1.text!, "equipe2": self.equipe2.text!, "prDom": Int(self.score1.text!)!, "prExt": Int(self.score2.text!)!]
+                let newRef = ref.child("users").child(snapshot.key).childByAutoId()
+                newRef.setValue(post)
+                print(snapshot.key)
+                print(email)
+            }
+            
+        })
         print("validate")
     }
 }
