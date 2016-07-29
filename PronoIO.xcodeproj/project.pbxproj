@@ -21,6 +21,8 @@
 		217DBB181D3BC72B00031D8F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217DBB161D3BC72B00031D8F /* FBSDKCoreKit.framework */; };
 		217DBB191D3BC72B00031D8F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217DBB171D3BC72B00031D8F /* FBSDKLoginKit.framework */; };
 		21DB04741D47CA800006B0A0 /* PronosticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB04731D47CA800006B0A0 /* PronosticViewController.swift */; };
+		21EFCF171D4BA7E900E7450D /* DoneMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EFCF161D4BA7E900E7450D /* DoneMatchController.swift */; };
+		21EFCF191D4BA9CC00E7450D /* DoneMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EFCF181D4BA9CC00E7450D /* DoneMatchTableViewCell.swift */; };
 		21FFB7DE1D39130B005CA591 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFB7DD1D39130B005CA591 /* LoginViewController.swift */; };
 		21FFB7E01D39161D005CA591 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFB7DF1D39161D005CA591 /* SignUpViewController.swift */; };
 		21FFB7E41D392ECE005CA591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21FFB7E31D392ECE005CA591 /* GoogleService-Info.plist */; };
@@ -66,6 +68,8 @@
 		217DBB161D3BC72B00031D8F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		217DBB171D3BC72B00031D8F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		21DB04731D47CA800006B0A0 /* PronosticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronosticViewController.swift; sourceTree = "<group>"; };
+		21EFCF161D4BA7E900E7450D /* DoneMatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneMatchController.swift; sourceTree = "<group>"; };
+		21EFCF181D4BA9CC00E7450D /* DoneMatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneMatchTableViewCell.swift; sourceTree = "<group>"; };
 		21FFB7DD1D39130B005CA591 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21FFB7DF1D39161D005CA591 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		21FFB7E31D392ECE005CA591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				21FFB7DF1D39161D005CA591 /* SignUpViewController.swift */,
 				0AC887711D36C75500430F05 /* ViewController.swift */,
 				0A6B62D91D3A6C6200435C69 /* MatchController.swift */,
+				21EFCF161D4BA7E900E7450D /* DoneMatchController.swift */,
 				210A330D1D44C2C4001C78F2 /* ProfilViewController.swift */,
 				0AC887731D36C75500430F05 /* Main.storyboard */,
 				21DB04731D47CA800006B0A0 /* PronosticViewController.swift */,
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				0ACD11B01D3A69D7002B8859 /* MatchCellTableView.swift */,
+				21EFCF181D4BA9CC00E7450D /* DoneMatchTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				210A330E1D44C2C4001C78F2 /* ProfilViewController.swift in Sources */,
+				21EFCF191D4BA9CC00E7450D /* DoneMatchTableViewCell.swift in Sources */,
 				21FFB7DE1D39130B005CA591 /* LoginViewController.swift in Sources */,
 				0AC887721D36C75500430F05 /* ViewController.swift in Sources */,
 				21FFB7E01D39161D005CA591 /* SignUpViewController.swift in Sources */,
@@ -384,6 +391,7 @@
 				0A6B62DA1D3A6C6200435C69 /* MatchController.swift in Sources */,
 				0A31DC731D392535008CD69A /* Match.swift in Sources */,
 				21DB04741D47CA800006B0A0 /* PronosticViewController.swift in Sources */,
+				21EFCF171D4BA7E900E7450D /* DoneMatchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

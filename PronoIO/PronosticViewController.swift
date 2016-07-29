@@ -123,7 +123,6 @@ class PronosticViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         if let user = FIRAuth.auth()?.currentUser {
             userEmail = user.email!
-            
         }
         var ref = FIRDatabase.database().reference()
         
@@ -131,20 +130,15 @@ class PronosticViewController: UIViewController, UIPickerViewDataSource, UIPicke
             snapshot in
             
             let email = snapshot.value!["email"] as! String
-            
             if (email == userEmail) {
                 
                 self.foldKey = snapshot.key
                 let findMref = ref.child("users").child(self.foldKey).child("pronos").queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {
                     snapshot in
-                    
                     let equipe1 = snapshot.value!["equipe1"] as! String
                     let equipe2 = snapshot.value!["equipe2"] as! String
-                    
                     if (equipe1 == self.equipe1.text && equipe2 == self.equipe2.text) {
-                        
                         self.checkP = true
-                        print("yolooooooo")
                     }
                     
                 })
@@ -152,7 +146,6 @@ class PronosticViewController: UIViewController, UIPickerViewDataSource, UIPicke
             }
             
         })
-        
     }
     
     @IBAction func validate(sender: AnyObject) {

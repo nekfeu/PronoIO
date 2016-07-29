@@ -29,3 +29,33 @@ class Match {
         }
     }
 }
+
+class Prono {
+    private var ref: FIRDatabase!
+    private(set) var key: String!
+    private(set) var dom: String!
+    private(set) var ext: String!
+    private(set) var prono1: Int!
+    private(set) var prono2: Int!
+    private(set) var joker: String!
+    
+    init(key: String, dictionary: Dictionary<String, AnyObject>) {
+        self.key = key
+        
+        if let team1 = dictionary["equipe1"] as? String {
+            self.dom = team1
+        }
+        if let team2 = dictionary["equipe2"] as? String {
+            self.ext = team2
+        }
+        if let pronoTeam1 = dictionary["prDom"] as? Int {
+            self.prono1 = pronoTeam1
+        }
+        if let pronoTeam2 = dictionary["prExt"] as? Int {
+            self.prono2 = pronoTeam2
+        }
+        if let jokerSelected = dictionary["joker"] as? String {
+            self.joker = jokerSelected
+        }
+    }
+}
