@@ -42,7 +42,8 @@ class SignUpViewController: UIViewController {
                 else {
                 
                     print("User created")
-                    let newUser = ["club": "0", "email": self.emailAddressTextField.text!, "mobile": "0000000000", "points": 0, "pseudo": self.pseudo.text!, "rank": 0]
+                    let matchDemo = ["matchDemo" : ["equipe1": "0", "equipe2": "0", "prDom": 0, "prExt": 0, "joker": "nil"]]
+                    let newUser = ["club": "0", "email": self.emailAddressTextField.text!, "mobile": "0000000000", "points": 0, "pseudo": self.pseudo.text!, "rank": 0, "pronos": matchDemo]
                     let firebaseNewUser = self.ref.childByAutoId()
                     firebaseNewUser.setValue(newUser)
                     self.performSegueWithIdentifier("GoToCo", sender: self)
