@@ -13,11 +13,19 @@ class MatchController: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     @IBOutlet weak var tableView: UITableView!
     
-    var matches = Array<Match>()
+    var matches = [Match]()
+    var equipe1_name = ""
+    var equipe2_name = ""
+    var matchTime = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMatches()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.hidden=true
     }
     
     func getMatchFromAPI() {
@@ -80,8 +88,37 @@ class MatchController: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
     }
     
+    //
+    // Sends Data to PronosticViewController :
+    //
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        var match : Match
+        match = self.matches[indexPath.row]
+        
+        self.equipe1_name = match.dom
+        self.equipe2_name = match.ext
+        self.matchTime = match.time
+        performSegueWithIdentifier("pronostic", sender: self)
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matches.count
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if (segue.identifier == "pronostic")
+        {
+            let DestViewController : PronosticViewController = segue.destinationViewController as! PronosticViewController
+            DestViewController.equipe1_name = self.equipe1_name
+            DestViewController.equipe2_name = self.equipe2_name
+            DestViewController.matchTime = self.matchTime
+        }
+        
     }
     
 }
