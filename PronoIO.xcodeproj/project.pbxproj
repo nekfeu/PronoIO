@@ -21,10 +21,6 @@
 		0AC887901D36C75500430F05 /* PronoIOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8878F1D36C75500430F05 /* PronoIOUITests.swift */; };
 		0ACD11B11D3A69D7002B8859 /* MatchCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACD11B01D3A69D7002B8859 /* MatchCellTableView.swift */; };
 		210A330E1D44C2C4001C78F2 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A330D1D44C2C4001C78F2 /* ProfilViewController.swift */; };
-		217DBB181D3BC72B00031D8F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217DBB161D3BC72B00031D8F /* FBSDKCoreKit.framework */; };
-		217DBB191D3BC72B00031D8F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217DBB171D3BC72B00031D8F /* FBSDKLoginKit.framework */; };
-		21DB04741D47CA800006B0A0 /* PronosticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB04731D47CA800006B0A0 /* PronosticViewController.swift */; };
-		21EFCF171D4BA7E900E7450D /* DoneMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EFCF161D4BA7E900E7450D /* DoneMatchController.swift */; };
 		21EFCF191D4BA9CC00E7450D /* DoneMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EFCF181D4BA9CC00E7450D /* DoneMatchTableViewCell.swift */; };
 		21FFB7DE1D39130B005CA591 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFB7DD1D39130B005CA591 /* LoginViewController.swift */; };
 		21FFB7E01D39161D005CA591 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFB7DF1D39161D005CA591 /* SignUpViewController.swift */; };
@@ -71,10 +67,6 @@
 		0ACD11B01D3A69D7002B8859 /* MatchCellTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCellTableView.swift; sourceTree = "<group>"; };
 		210A330D1D44C2C4001C78F2 /* ProfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		217DBAF51D3BC0F700031D8F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		217DBB161D3BC72B00031D8F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		217DBB171D3BC72B00031D8F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		21DB04731D47CA800006B0A0 /* PronosticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronosticViewController.swift; sourceTree = "<group>"; };
-		21EFCF161D4BA7E900E7450D /* DoneMatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneMatchController.swift; sourceTree = "<group>"; };
 		21EFCF181D4BA9CC00E7450D /* DoneMatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneMatchTableViewCell.swift; sourceTree = "<group>"; };
 		21FFB7DD1D39130B005CA591 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21FFB7DF1D39161D005CA591 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +82,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				974480274243B1686522CB91 /* libPods-PronoIO.a in Frameworks */,
-				217DBB181D3BC72B00031D8F /* FBSDKCoreKit.framework in Frameworks */,
-				217DBB191D3BC72B00031D8F /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +193,6 @@
 		E26E39564103B57352A7DFE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				217DBB161D3BC72B00031D8F /* FBSDKCoreKit.framework */,
-				217DBB171D3BC72B00031D8F /* FBSDKLoginKit.framework */,
 				7F8279B3CF06E0216C111D8E /* libPods-PronoIO.a */,
 			);
 			name = Frameworks;
